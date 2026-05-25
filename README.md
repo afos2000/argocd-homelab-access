@@ -2,11 +2,11 @@
 
 Request access to ArgoCD at https://argocd.andreskube.uk.
 
-## How to request access
+## How to get access
 
-1. Make sure you have a **Keycloak account** - ask an admin to create one
-2. Open a **PR** adding your Keycloak username to `users.yaml` under the role you want
-3. Once merged, you can log in at https://argocd.andreskube.uk
+1. **Create an account** at https://keycloak.andreskube.uk/realms/argocd/account (click "Register")
+2. **Open a PR** adding your Keycloak username to `users.yaml` under the role you want
+3. Once merged, log in at https://argocd.andreskube.uk with your new account
 
 ## Roles
 
