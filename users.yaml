@@ -3,4 +3,4 @@
 readonly:
   # - your-keycloak-username
 admin:
-  # - your-keycloak-username
+  - afos2000
