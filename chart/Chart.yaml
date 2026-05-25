@@ -1,0 +1,4 @@
+apiVersion: v2
+name: argocd-homelab-access
+description: RBAC configuration for query statement's homelab ArgoCD
+version: 0.1.0

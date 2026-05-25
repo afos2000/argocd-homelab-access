@@ -1,0 +1,4 @@
+# Users are defined in ../users.yaml
+# This file exists only as a default for the Helm chart.
+readonly: []
+admin: []
