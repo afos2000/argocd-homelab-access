@@ -20,9 +20,6 @@ data:
     p, role:argocd-readonly, clusters, get, *, allow
     p, role:argocd-readonly, repositories, get, *, allow
     p, role:argocd-readonly, logs, get, *, allow
-    {{- range .Values.admin }}
-    g, {{ . }}, role:argocd-admin
-    {{- end }}
-    {{- range .Values.readonly }}
-    g, {{ . }}, role:argocd-readonly
-    {{- end }}
+
+    g, argocd-admin, role:argocd-admin
+    g, argocd-readonly, role:argocd-readonly
