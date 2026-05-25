@@ -6,7 +6,7 @@ metadata:
 data:
   policy.default: ""
   policy.matchMode: glob
-  scopes: "[groups]"
+  scopes: "[preferred_username, groups]"
   policy.csv: |
     p, role:argocd-admin, applications, *, */*, allow
     p, role:argocd-admin, projects, *, *, allow
@@ -20,6 +20,9 @@ data:
     p, role:argocd-readonly, clusters, get, *, allow
     p, role:argocd-readonly, repositories, get, *, allow
     p, role:argocd-readonly, logs, get, *, allow
-
-    g, argocd-admin, role:argocd-admin
-    g, argocd-readonly, role:argocd-readonly
+    {{- range .Values.admin }}
+    g, {{ . }}, role:argocd-admin
+    {{- end }}
+    {{- range .Values.readonly }}
+    g, {{ . }}, role:argocd-readonly
+    {{- end }}
