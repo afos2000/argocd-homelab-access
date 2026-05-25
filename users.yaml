@@ -1,6 +1,6 @@
 # Add your username below. You must already have an account in Keycloak.
 # Ask an admin in the homelab to create one if you don't.
 readonly:
-  - read-only
+  - test-user@test.com
 admin:
   - afos2000
